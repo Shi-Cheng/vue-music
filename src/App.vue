@@ -12,7 +12,7 @@
 <script type="text/ecmascript-6">
   import MHeader from 'components/m-header/m-header'
   import Tab from 'components/tab/tab'
-  //
+  // 这是一个测试
   export default {
     components: {
       MHeader,
