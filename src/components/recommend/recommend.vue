@@ -2,15 +2,18 @@
   <div class="recommend" ref="recommend">
     <scroll ref="scroll" class="recommend-content" :data="discList">
       <div>
-        <div v-if="recommends.length" class="slider-wrapper" ref="sliderWrapper">
-          <slider>
-            <div v-for="item in recommends">
-              <a :href="item.linkUrl">
-                <img class="needsclick" @load="loadImage" :src="item.picUrl">
-              </a>
-            </div>
-          </slider>
-        </div>
+
+        <!--滚动无法实现-->
+        <!--<div v-if="recommends.length" class="slider-wrapper" ref="sliderWrapper">-->
+          <!--<slider>-->
+            <!--<div v-for="item in recommends">-->
+              <!--<a :href="item.linkUrl">-->
+                <!--<img class="needsclick" @load="loadImage" :src="item.picUrl">-->
+              <!--</a>-->
+            <!--</div>-->
+          <!--</slider>-->
+        <!--</div>-->
+
         <div class="recommend-list">
           <h1 class="list-title">热门歌单推荐</h1>
           <ul>
@@ -26,6 +29,7 @@
           </ul>
         </div>
       </div>
+      <!--懒加载过程，如果discList 不存在就进行加载-->
       <div class="loading-container" v-show="!discList.length">
         <loading></loading>
       </div>
@@ -52,28 +56,32 @@
       }
     },
     created() {
-      this._getRecommend()
-
-      this._getDiscList()
+      // this._getRecommend()
+      setTimeout(() => {
+        this._getDiscList()
+      }, 2000)
     },
     methods: {
       handlePlaylist(playlist) {
         const bottom = playlist.length > 0 ? '60px' : ''
-
         this.$refs.recommend.style.bottom = bottom
         this.$refs.scroll.refresh()
       },
       loadImage() {
+        // 知识点
+        // loadImage 方法核心作用在于资源加载完毕后再重新获取页面高度，进行可滚动操作
         if (!this.checkloaded) {
           this.checkloaded = true
           this.$refs.scroll.refresh()
         }
       },
       selectItem(item) {
-        this.$router.push({
-          path: `/recommend/${item.dissid}`
-        })
-        this.setDisc(item)
+        console.info('item', item.dissid)
+        return false
+        // this.$router.push({
+        //   path: `/recommend/${item.dissid}`
+        // })
+        // this.setDisc(item)
       },
       _getRecommend() {
         getRecommend().then((res) => {

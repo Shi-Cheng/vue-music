@@ -13,6 +13,7 @@ import 'common/stylus/index.styl'
 
 fastclick.attach(document.body)
 
+// 图片懒加载
 Vue.use(VueLazyload, {
   loading: require('common/image/default.png')
 })
