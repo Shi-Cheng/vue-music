@@ -15,6 +15,11 @@ const Disc = (resolve) => {
   })
 }
 
+const Singer = (resolve) => {
+  import('../components/singer/singer').then((module) => {
+    resolve(module)
+  })
+}
 export default new Router({
   routes: [
     {
@@ -29,5 +34,9 @@ export default new Router({
           path: ':id',
           component: Disc
         }]
+    },
+    {
+      path: '/singer',
+      component: Singer
     }]
 })

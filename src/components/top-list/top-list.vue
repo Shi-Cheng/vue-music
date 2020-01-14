@@ -5,11 +5,11 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import MusicList from 'components/music-list/music-list'
-  import {getMusicList} from 'api/rank'
-  import {ERR_OK} from 'api/config'
+  import MusicList from '../../components/music-list/music-list'
+  import {getMusicList} from '../../api/rank'
+  import {ERR_OK} from '../../api/config'
   import {mapGetters} from 'vuex'
-  import {createSong} from 'common/js/song'
+  import {createSong} from '../../common/js/song'
 //
   export default {
     computed: {
