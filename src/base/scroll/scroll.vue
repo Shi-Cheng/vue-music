@@ -54,7 +54,7 @@
         })
 
         if (this.listenScroll) {
-          let me = this
+          const me = this
           this.scroll.on('scroll', (pos) => {
             me.$emit('scroll', pos)
           })

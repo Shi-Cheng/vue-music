@@ -8,7 +8,7 @@
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --fix --ext .js,.vue src"
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
@@ -19,7 +19,7 @@
     "vue-lazyload": "1.0.3",
     "axios": "^0.16.1",
     "jsonp": "0.2.1",
-    "better-scroll": "^0.1.15",
+    "better-scroll": "~1.15.2",
     "create-keyframe-animation": "^0.1.0",
     "js-base64": "^2.1.9",
     "lyric-parser": "^1.0.1",

@@ -1,6 +1,6 @@
-# vue-music
+# vip-music
 
-> Vue.js 打造高级实战——音乐 App
+> 音乐 App
 
 ## 项目树
 ```
@@ -144,23 +144,10 @@
 
 ```
 
-## 项目截图
-
-![image](https://github.com/songhaoreact/vue-music/blob/master/static/1.png)
-
-![image](https://github.com/songhaoreact/vue-music/blob/master/static/2.png)
-
-![image](https://github.com/songhaoreact/vue-music/blob/master/static/3.png)
-
-![image](https://github.com/songhaoreact/vue-music/blob/master/static/4.png)
-
-![image](https://github.com/songhaoreact/vue-music/blob/master/static/5.png)
-
-
 ### 安装与运行
 
 ```
-git clone https://github.com/songhaoreact/vue-music.git
+git clone git@github.com:Shi-Cheng/vue-music.git
 
 cd vue-music
 
